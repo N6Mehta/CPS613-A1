@@ -22,11 +22,13 @@ Partial Class SingleTimer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LocationButton = New System.Windows.Forms.RadioButton()
         Me.StartButton = New System.Windows.Forms.Button()
         Me.StopButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.ColonLabel = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'LocationButton
@@ -35,14 +37,15 @@ Partial Class SingleTimer
         Me.LocationButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
         Me.LocationButton.Location = New System.Drawing.Point(12, 15)
         Me.LocationButton.Name = "LocationButton"
-        Me.LocationButton.Size = New System.Drawing.Size(197, 35)
+        Me.LocationButton.Size = New System.Drawing.Size(39, 35)
         Me.LocationButton.TabIndex = 0
         Me.LocationButton.TabStop = True
-        Me.LocationButton.Text = "RadioButton1"
+        Me.LocationButton.Text = " "
         Me.LocationButton.UseVisualStyleBackColor = True
         '
         'StartButton
         '
+        Me.StartButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.StartButton.Location = New System.Drawing.Point(18, 114)
         Me.StartButton.Name = "StartButton"
         Me.StartButton.Size = New System.Drawing.Size(81, 67)
@@ -52,6 +55,7 @@ Partial Class SingleTimer
         '
         'StopButton
         '
+        Me.StopButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.StopButton.Location = New System.Drawing.Point(108, 114)
         Me.StopButton.Name = "StopButton"
         Me.StopButton.Size = New System.Drawing.Size(81, 67)
@@ -61,6 +65,7 @@ Partial Class SingleTimer
         '
         'ClearButton
         '
+        Me.ClearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.ClearButton.Location = New System.Drawing.Point(195, 114)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(81, 67)
@@ -71,17 +76,21 @@ Partial Class SingleTimer
         'ColonLabel
         '
         Me.ColonLabel.AutoSize = True
-        Me.ColonLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!)
-        Me.ColonLabel.Location = New System.Drawing.Point(134, 53)
+        Me.ColonLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ColonLabel.Location = New System.Drawing.Point(85, 53)
         Me.ColonLabel.Name = "ColonLabel"
-        Me.ColonLabel.Size = New System.Drawing.Size(31, 46)
+        Me.ColonLabel.Size = New System.Drawing.Size(124, 46)
         Me.ColonLabel.TabIndex = 4
-        Me.ColonLabel.Text = ":"
+        Me.ColonLabel.Text = "00:00"
+        '
+        'Timer1
+        '
         '
         'SingleTimer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Controls.Add(Me.ColonLabel)
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.StopButton)
@@ -99,4 +108,5 @@ Partial Class SingleTimer
     Friend WithEvents StopButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents ColonLabel As Label
+    Friend WithEvents Timer1 As Timer
 End Class

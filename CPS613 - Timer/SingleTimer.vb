@@ -1,9 +1,22 @@
 ﻿Public Class SingleTimer
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
+
+    Private locationName As String
+    Private Sub SingleTimer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs)
+    Property LocationText() As String
+
+        Get
+            Return locationName
+        End Get
+        Set(value As String)
+            locationName = value
+            LocationButton.Text = locationName
+        End Set
+    End Property
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
     End Sub
 End Class
